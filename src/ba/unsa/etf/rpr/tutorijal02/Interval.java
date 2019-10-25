@@ -59,7 +59,7 @@ public class Interval {
     }
 
     public static Interval intersect(Interval i1, Interval i2) {
-       return i1.intersect(i2);
+        return i1.intersect(i2);
     }
 
     @Override
