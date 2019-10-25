@@ -59,26 +59,7 @@ public class Interval {
     }
 
     public static Interval intersect(Interval i1, Interval i2) {
-        Interval i3 = new Interval();
-        double pocetak = 0, kraj = 0;
-        boolean pripadaPocetak = true, pripadaKraj = true;
-        if (i1.pocetna >= i2.pocetna) {
-            pocetak = i1.pocetna;
-            if (i1.pripadaPocetna == false) pripadaPocetak = false;
-        } else {
-            pocetak = i2.pocetna;
-            if (i2.pripadaPocetna == false) pripadaPocetak = false;
-        }
-        if (i1.krajnja <= i2.krajnja) {
-            kraj = i1.krajnja;
-            if (i1.pripadaKrajnja == false) pripadaKraj = false;
-        } else {
-            kraj = i2.krajnja;
-            if (i2.pripadaKrajnja == false) pripadaKraj = false;
-        }
-        i3 = new Interval(pocetak, kraj, pripadaPocetak, pripadaKraj);
-
-        return i3;
+       return i1.intersect(i2);
     }
 
     @Override
